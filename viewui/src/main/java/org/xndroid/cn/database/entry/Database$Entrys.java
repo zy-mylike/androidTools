@@ -1,8 +1,10 @@
-package org.xndroid.cn.database;
+package org.xndroid.cn.database.entry;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import org.xndroid.cn.database.BaseBean;
+import org.xndroid.cn.database.Config;
 import org.xndroid.cn.database.sql.WhereBuilder;
 
 import java.util.List;
@@ -10,15 +12,13 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/11/21 0021.
  */
-public interface BaseDataEnery {
+interface Database$Entrys {
 
     Config getConfig();
 
     SQLiteDatabase getDatabase();
 
-    void insert(BaseBean bean);
-
-    void insert(List<BaseBean> been);
+    void insert(List<? extends BaseBean> been);
 
     <T extends BaseBean> List<T> selectAll(Class<T> entityType);
 
@@ -42,6 +42,8 @@ public interface BaseDataEnery {
 
     void execSQL(String s);
 
+    void close();
+
     Cursor execQuerySQL(String s);
 
     /**
@@ -50,6 +52,8 @@ public interface BaseDataEnery {
      * @param entityType
      */
     void dropTable(Class<? extends BaseBean> entityType);
+
+    void createTable(Class<? extends BaseBean> entityType);
 
     void addColumn(Class<? extends BaseBean> entityType, String column, Class dataType);
 }

@@ -125,7 +125,7 @@ public class WhereBuilder {
         }
 
         // append columnName
-        builder.append("\"").append(columnName).append("\"");
+        builder.append(" ").append(columnName).append(" ");
 
         // convert op
         if ("!=".equals(op)) {

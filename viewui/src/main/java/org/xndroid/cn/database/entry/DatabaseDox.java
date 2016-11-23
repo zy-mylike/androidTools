@@ -1,12 +1,15 @@
-package org.xndroid.cn.database;
+package org.xndroid.cn.database.entry;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import org.xndroid.cn.database.BaseBean;
+import org.xndroid.cn.database.Config;
 import org.xndroid.cn.database.call.DataVersionChangListener;
 import org.xndroid.cn.database.sql.SQLBulder;
 import org.xndroid.cn.database.sql.WhereBuilder;
 import org.xndroid.cn.database.utils.DatabaseUtils;
+import org.xndroid.cn.utils.LogUtils;
 import org.xndroid.cn.utils.Reflection;
 
 import java.util.ArrayList;
@@ -19,7 +22,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * Created by Administrator on 2016/11/21 0021.
  */
 
-public class DatabaseDox implements BaseDataEnery {
+public class DatabaseDox extends BaseDataEnery {
 
     private final static HashMap<Config, DatabaseDox> CONFIG_MAP = new HashMap();
     protected SQLiteDatabase sqLiteDatabase;
@@ -39,7 +42,7 @@ public class DatabaseDox implements BaseDataEnery {
     }
 
 
-    private static DatabaseDox getIntences(Config config) {
+    public static DatabaseDox getIntences(Config config) {
         if (config == null) {
             config = new Config();
         }
@@ -55,11 +58,14 @@ public class DatabaseDox implements BaseDataEnery {
         int newVersion = config.getVersion();
         int oldVersion = dox.sqLiteDatabase.getVersion();
         DataVersionChangListener l = config.getVersionChangListener();
-        if (newVersion != oldVersion && l != null) {
-            if (newVersion > oldVersion) {
-                l.onUpgrade(dox, newVersion, oldVersion);
-            } else {
-                l.onLowgrade(dox, newVersion, oldVersion);
+        if (newVersion != oldVersion) {
+            if (l != null) {
+                if (newVersion > oldVersion) {
+                    l.onUpgrade(dox, newVersion, oldVersion);
+                } else {
+                    l.onLowgrade(dox, newVersion, oldVersion);
+                }
+                dox.sqLiteDatabase.setVersion(newVersion);
             }
         }
         return dox;
@@ -76,17 +82,22 @@ public class DatabaseDox implements BaseDataEnery {
         return sqLiteDatabase;
     }
 
+
     @Override
     public void insert(BaseBean bean) {
-        beginTransaction();
-        execSQL(SQLBulder.insertSQL(bean));
-        setTransactionSuccessful();
-        endTransaction();
+        if (bean instanceof BaseBean) {
+            beginTransaction();
+            execSQL(SQLBulder.insertSQL(bean));
+            setTransactionSuccessful();
+            endTransaction();
+        } else {
+            throw new ClassCastException();
+        }
+
     }
 
-
     @Override
-    public void insert(List<BaseBean> list) {
+    public void insert(List<? extends BaseBean> list) {
         beginTransaction();
         for (BaseBean bean : list)
             execSQL(SQLBulder.insertSQL(bean));
@@ -114,13 +125,13 @@ public class DatabaseDox implements BaseDataEnery {
             cursor.moveToFirst();
             list = new ArrayList<T>();
             while (cursor.moveToNext()) {
-                list.add(DatabaseUtils.getBean(entityType, cursor));
+                list.add((T) DatabaseUtils.getBean(entityType, cursor));
             }
             cursor.close();
         }
         setTransactionSuccessful();
         endTransaction();
-        return null;
+        return list;
     }
 
     @Override
@@ -151,7 +162,7 @@ public class DatabaseDox implements BaseDataEnery {
     @Override
     public void updataWhere(BaseBean bean, String where) {
         beginTransaction();
-        execSQL(SQLBulder.updataWhereSQL(bean, WhereBuilder.w().and("ids", "=", bean.ids).toString()));
+        execSQL(SQLBulder.updataWhereSQL(bean, where));
         setTransactionSuccessful();
         endTransaction();
     }
@@ -159,7 +170,7 @@ public class DatabaseDox implements BaseDataEnery {
     @Override
     public void updata(BaseBean bean) {
         beginTransaction();
-        execSQL(SQLBulder.updataWhereSQL(bean, null));
+        execSQL(SQLBulder.updataWhereSQL(bean, WhereBuilder.b("ids", "=", bean.ids).toString()));
         setTransactionSuccessful();
         endTransaction();
     }
@@ -178,6 +189,14 @@ public class DatabaseDox implements BaseDataEnery {
     }
 
     @Override
+    public void createTable(Class<? extends BaseBean> entityType) {
+        beginTransaction();
+        execSQL(SQLBulder.CREATETABLE(entityType));
+        setTransactionSuccessful();
+        endTransaction();
+    }
+
+    @Override
     public void addColumn(Class<? extends BaseBean> entityType, String column, Class dataType) {
         beginTransaction();
         execSQL(SQLBulder.addColumnSQL(entityType, column, dataType));
@@ -187,21 +206,37 @@ public class DatabaseDox implements BaseDataEnery {
 
     @Override
     public void execSQL(String s) {
-        sqLiteDatabase.execSQL(s);
+
+        synchronized (mConfig) {
+            sqLiteDatabase.execSQL(s);
+            debug(s);
+        }
+    }
+
+    private void debug(String s) {
+        LogUtils.e(s);
+    }
+
+    @Override
+    public void close() {
+        sqLiteDatabase.close();
+        CONFIG_MAP.remove(mConfig);
     }
 
     @Override
     public Cursor execQuerySQL(String s) {
+        debug(s);
         return sqLiteDatabase.rawQuery(s, null);
     }
 
     private void beginTransaction() {
         if (allowTransaction) {
             sqLiteDatabase.beginTransaction();
+        } else {
+            mLock.lock();
+            writeLocked = true;
         }
 
-        mLock.lock();
-        writeLocked = true;
     }
 
     private void setTransactionSuccessful() {
@@ -219,5 +254,6 @@ public class DatabaseDox implements BaseDataEnery {
             this.writeLocked = false;
         }
     }
+
 
 }

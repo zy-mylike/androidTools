@@ -1,6 +1,6 @@
 package org.xndroid.cn.database.call;
 
-import org.xndroid.cn.database.DatabaseDox;
+import org.xndroid.cn.database.entry.DatabaseDox;
 
 /**
  * Created by Administrator on 2016/11/21 0021.
