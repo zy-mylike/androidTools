@@ -2,8 +2,6 @@ package org.xndroid.cn.database.sql;
 
 import android.text.TextUtils;
 
-import org.xndroid.cn.database.sql.ColumnDbType;
-
 import java.lang.reflect.Field;
 import java.sql.Blob;
 

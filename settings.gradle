@@ -1,1 +1,1 @@
-include ':app', ':viewui', ':quxintui', ':Icard'
+include ':app', ':widget-ui', ':quxintui', ':bindview'

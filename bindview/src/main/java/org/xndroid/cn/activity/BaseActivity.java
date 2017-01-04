@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import org.xndroid.BuildConfig;
 import org.xndroid.cn.BaseApplication;
 import org.xndroid.cn.annotation.init.ViewInobject;
 

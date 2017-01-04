@@ -8,3 +8,4 @@
 *.apk
 /captures
 .externalNativeBuild
+libs/

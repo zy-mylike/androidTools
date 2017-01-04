@@ -8,10 +8,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Icard" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/bindview" />
             <option value="$PROJECT_DIR$/quxintui" />
-            <option value="$PROJECT_DIR$/viewui" />
+            <option value="$PROJECT_DIR$/widget-ui" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
