@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_black"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+ <include android:id="@+id/search_layout"
+     layout="@layout/layout_seacher"/>
+
+
+    <RelativeLayout
+        android:id="@+id/new_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_8"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/px_12"
+        android:paddingTop="@dimen/px_12">
+
+
+        <ImageView
+            android:id="@+id/imgs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_24"
+            android:src="@mipmap/new_shopcar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_8"
+            android:layout_toRightOf="@+id/imgs"
+            android:text="新的商家"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_16_px" />
+
+
+        <com.enetic.push.view.TextShapeView
+            android:id="@+id/nums"
+            android:layout_width="@dimen/px_36"
+            android:layout_height="@dimen/px_36"
+            android:layout_marginRight="@dimen/px_16"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:text="0"/>
+
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/px_8">
+
+        <org.eteclab.ui.widget.pulltorefresh.PullToLoadView
+            android:id="@+id/country_lvcountry"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"  />
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/show_head_toast_bg"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <com.enetic.push.view.SideBarView
+            android:id="@+id/sidrbar"
+            android:layout_width="30.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+
+</LinearLayout>

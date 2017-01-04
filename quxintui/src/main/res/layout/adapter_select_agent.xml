@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/adapter_contact_tag" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <CheckBox
+            android:id="@+id/select"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="35dp"
+            android:layout_marginLeft="@dimen/px_16" />
+
+        <RelativeLayout
+            android:id="@+id/rl_header_img"
+            android:layout_width="@dimen/px_46"
+            android:layout_height="@dimen/px_52"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12">
+
+            <ImageView
+                android:id="@+id/header_img"
+                android:layout_width="@dimen/px_46"
+                android:layout_height="@dimen/px_52"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_launcher" />
+            <ImageView
+                android:layout_width="@dimen/px_46"
+                android:layout_height="@dimen/px_52"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_header_cirle" />
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/rl_header_img"
+            android:layout_marginLeft="@dimen/px_16"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/rl_header_img"
+            android:singleLine="true"
+            android:text="用户名"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_16_px" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/name"
+            android:layout_below="@id/name"
+            android:layout_marginBottom="@dimen/px_12"
+            android:layout_marginTop="@dimen/px_8"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="代理商家"
+                    android:textColor="#808080"
+                    android:textSize="@dimen/text_size_12_px" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_4"
+                    android:text="100"
+                    android:textColor="#FF524F"
+                    android:textSize="@dimen/text_size_12_px" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_15"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="访问量"
+                    android:textColor="@color/text_color_holder"
+                    android:textSize="@dimen/text_size_12_px" />
+
+                <TextView
+                    android:id="@+id/visit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_4"
+                    android:text="900个"
+                    android:textColor="#FF524F"
+                    android:textSize="@dimen/text_size_12_px" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

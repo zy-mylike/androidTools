@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/layout_black"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_seacher"/>
+
+    <RelativeLayout
+        android:id="@+id/new_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_8"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/px_12"
+        android:paddingTop="@dimen/px_12">
+
+
+        <ImageView
+            android:id="@+id/imgs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_24"
+            android:src="@mipmap/new_shopcar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_8"
+            android:layout_toRightOf="@+id/imgs"
+            android:text="新的代理"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_16_px" />
+
+        <TextView
+            android:id="@+id/new_nums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="7"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/px_8">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <com.enetic.push.view.ViewLineLayout
+                android:id="@+id/share_Circle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:texts="分享至微信朋友圈"
+                android:layout_marginTop="@dimen/px_4"
+                app:left_drawable="@mipmap/share_friends"/>
+
+            <com.enetic.push.view.ViewLineLayout
+                android:id="@+id/share_friend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:texts="邀请微信好友"
+                android:layout_marginTop="@dimen/px_4"
+                app:left_drawable="@mipmap/icon_share_agent"/>
+
+            <com.enetic.push.view.ViewLineLayout
+                android:id="@+id/share_agent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:texts="添加已注册代理"
+                android:layout_marginTop="@dimen/px_4"
+                app:left_drawable="@mipmap/icon_add_agent"/>
+
+            <org.eteclab.ui.widget.pulltorefresh.PullToLoadView
+                android:id="@+id/country_lvcountry"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:divider="@null"
+                android:dividerHeight="@dimen/px_1" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/show_head_toast_bg"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <com.enetic.push.view.SideBarView
+            android:id="@+id/sidrbar"
+            android:layout_width="30.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center"
+            android:visibility="visible"/>
+    </FrameLayout>
+
+</LinearLayout>

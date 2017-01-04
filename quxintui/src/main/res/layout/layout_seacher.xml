@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_seacher"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/px_16"
+    android:layout_marginRight="@dimen/px_16"
+    android:layout_marginTop="@dimen/px_8"
+    android:background="@drawable/shape_select"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/icon_seacher_agent"
+        android:drawablePadding="@dimen/px_8"
+        android:gravity="center"
+        android:padding="@dimen/px_8"
+        android:text="搜索内容"
+        android:textColor="#FF808080" />
+
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_seacher_agent"
+        android:drawablePadding="@dimen/px_8"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="@dimen/px_8"
+        android:text="搜索内容"
+        android:textColor="#FF808080"
+        android:visibility="gone" />
+
+</LinearLayout>

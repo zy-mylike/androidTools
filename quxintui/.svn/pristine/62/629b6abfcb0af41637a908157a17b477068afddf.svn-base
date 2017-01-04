@@ -1,0 +1,70 @@
+package com.enetic.push.images.util;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Bimp {
+
+    private static Bimp bm;
+
+
+    public static Bimp getBm() {
+        if (bm == null) {
+            bm = new Bimp();
+        }
+        return bm;
+    }
+
+    public int max = 0;
+    public List<Bitmap> bmp = new ArrayList<Bitmap>();
+
+    //图片sd地址  上传服务器时把图片调用下面方法压缩后 保存到临时文件夹 图片压缩后小于100KB，失真度不明显
+    public List<String> drr = new ArrayList<String>();
+
+
+    public Bitmap revitionImageSize(String path) throws IOException {
+        if(!new File(path).exists()){
+            return  null;
+        }
+        BufferedInputStream in = new BufferedInputStream(new FileInputStream(new File(path)));
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeStream(in, null, options);
+        in.close();
+        int i = 0;
+        Bitmap bitmap = null;
+        while (true) {
+            if ((options.outWidth >> i <= 1000)
+                    && (options.outHeight >> i <= 1000)) {
+                in = new BufferedInputStream(
+                        new FileInputStream(new File(path)));
+                options.inSampleSize = (int) Math.pow(2.0D, i);
+                options.inJustDecodeBounds = false;
+                bitmap = BitmapFactory.decodeStream(in, null, options);
+                break;
+            }
+            i += 1;
+        }
+        return bitmap;
+    }
+
+    public void recycle() {
+        for (Bitmap bm : bmp) {
+            if (!bm.isRecycled()) {
+                bm.recycle();
+            }
+            bm = null;
+        }
+        bmp.clear();
+        drr.clear();
+        //FileUtils.deleteDir();
+        bm =null;
+    }
+}

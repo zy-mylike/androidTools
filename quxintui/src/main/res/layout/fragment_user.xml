@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ViewLineLayout="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="@dimen/px_97"
+            android:layout_height="@dimen/px_109"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px_20">
+
+            <ImageView
+                android:id="@+id/user_img"
+                android:layout_width="@dimen/px_97"
+                android:layout_height="@dimen/px_109"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/us_default_header" />
+
+            <ImageView
+                android:layout_width="@dimen/px_97"
+                android:layout_height="@dimen/px_109"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_header_cirle" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_12"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="5"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:text="耿小畅"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_24_px" />
+
+            <ImageView
+                android:id="@+id/user_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/px_4"
+                android:src="@mipmap/us_edittext" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_12"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="金牌代理"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_16_px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_4"
+                android:src="@mipmap/us_agent" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px_24"
+            android:layout_marginTop="@dimen/px_20">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/view"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_5"
+                    android:text="今日收入" />
+                proxy_num
+                <TextView
+                    android:id="@+id/proxy_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000元"
+                    android:textColor="@color/red_holder" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/px_16"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/px_24"
+                android:layout_marginRight="@dimen/px_24"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/view"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_5"
+                    android:text="累计收入" />
+
+                <TextView
+                    android:id="@+id/product_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100万元"
+                    android:textColor="@color/red_holder" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <com.enetic.push.view.ViewLineLayout
+        android:id="@+id/layout_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_8"
+        ViewLineLayout:left_drawable="@mipmap/icon_us_zh"
+        ViewLineLayout:right_drawable="@mipmap/user_more"
+        ViewLineLayout:texts="我的账户" />
+
+    <include layout="@layout/layout_line" />
+
+    <com.enetic.push.view.ViewLineLayout
+        android:id="@+id/layout_Usercar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ViewLineLayout:left_drawable="@mipmap/icon_us_card"
+        ViewLineLayout:right_drawable="@mipmap/user_more"
+        ViewLineLayout:texts="身份信息" />
+
+    <include layout="@layout/layout_line" />
+
+    <com.enetic.push.view.ViewLineLayout
+        android:id="@+id/layout_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        ViewLineLayout:left_drawable="@mipmap/icon_us_recdor"
+        ViewLineLayout:right_drawable="@mipmap/user_more"
+        ViewLineLayout:texts="推广记录" />
+
+    <include layout="@layout/layout_line" />
+
+    <com.enetic.push.view.ViewLineLayout
+        android:id="@+id/layout_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        ViewLineLayout:left_drawable="@mipmap/icon_us_set"
+        ViewLineLayout:right_drawable="@mipmap/user_more"
+        ViewLineLayout:texts="设置" />
+
+</LinearLayout>

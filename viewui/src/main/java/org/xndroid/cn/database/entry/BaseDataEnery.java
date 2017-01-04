@@ -9,4 +9,7 @@ public abstract class BaseDataEnery implements Database$Entrys {
 
     public abstract void insert(BaseBean bean);
 
+    BaseDataEnery() {
+    }
+
 }

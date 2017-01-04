@@ -35,13 +35,21 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.0.1'
     compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
 }
-task deleteOldJar(type: Delete) {
-    delete 'build/outputs/test.jar'
-}
-task exportJar(type: Copy) {
+task makeJar(type: Copy) {
+    //删除存在的
+//    delete 'build/libs/base.jar'
+    //设置拷贝的文件
     from('build/intermediates/bundles/release/')
-    into('build/libs/')
+    //打进jar包后的文件目录
+    into('build/')
+    //将classes.jar放入build/libs/目录下
+    //include ,exclude参数来设置过滤
+    //（我们只关心classes.jar这个文件）
     include('classes.jar')
-    rename ('classes.jar', 'test.jar')
+    //重命名
+    rename ('classes.jar', 'base.jar')
 }
+
+makeJar.dependsOn(build)

@@ -8,11 +8,11 @@ import org.xndroid.cn.database.BaseBean;
 
 public class Bean extends BaseBean {
     public String name;
-//    public String age;
+    public int age;
 //    public String ages;
 
     public String time;
-    public String height;
+    public double height;
     public String score;
     public String heights;
     public String scores;

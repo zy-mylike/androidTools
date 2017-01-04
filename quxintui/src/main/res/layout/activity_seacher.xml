@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.enetic.push.activity.SeacherActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/seacher_back"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/px_10">
+
+                    <EditText
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="搜索内容"
+                        android:imeOptions="actionSearch"
+                        android:maxLines="1"
+                        android:padding="@dimen/px_8"
+                        android:drawableLeft="@mipmap/icon_seacher_agent"
+                        android:drawablePadding="@dimen/px_8"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textColorHint="#808080"
+                        android:textSize="@dimen/text_size_16_px" />
+
+                    <ImageView
+                        android:id="@+id/clear"
+                        android:layout_width="@dimen/px_25"
+                        android:layout_height="@dimen/px_25"
+                        android:layout_marginBottom="@dimen/px_6"
+                        android:layout_marginRight="@dimen/px_6"
+                        android:layout_marginTop="@dimen/px_6"
+                        android:src="@mipmap/icon_clean_text"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/start_sou"
+                    style="?toolbarNavigationButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_size_16_px" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_views"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_8"
+            android:background="@android:color/white"
+            android:padding="@dimen/px_8"
+            android:text="热门搜索"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="gone" />
+
+        <com.enetic.push.view.FlowLayout
+            android:id="@+id/flow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:paddingLeft="@dimen/px_16"
+            android:paddingRight="@dimen/px_15" />
+
+        <include layout="@layout/layout_line" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="搜索记录"
+            android:layout_margin="10dp"
+            android:textColor="#000000"
+            android:textSize="14sp"/>
+
+        <include layout="@layout/layout_line" />
+
+        <org.eteclab.ui.widget.NoScrollListView
+            android:id="@+id/hostory_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#0000"
+            android:listSelector="#0000"
+            android:numColumns="1"
+            android:verticalSpacing="0dp" />
+
+        <LinearLayout
+            android:id="@+id/clear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/clear_jilu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/px_20"
+                android:text="清空搜索记录"
+                android:textColor="#FF524F"
+                android:textSize="@dimen/text_size_16_px" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <org.eteclab.ui.widget.pulltorefresh.PullToLoadView
+        android:id="@+id/pull_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

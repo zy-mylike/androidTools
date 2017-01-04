@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_black"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.enetic.push.activity.agent.CashMoneyActivity">
+
+    <include layout="@layout/layout_activity_header_main" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_16"
+        android:layout_marginRight="@dimen/px_16"
+        android:layout_marginTop="@dimen/px_8"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_cash_money">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/px_14"
+                android:layout_marginLeft="@dimen/px_20"
+                android:layout_marginTop="@dimen/px_14"
+                android:text="@string/tixian_dao"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_16_px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/zhifubao_name"
+                android:textColor="#339A5C"
+                android:textSize="@dimen/text_size_20_px" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title_cash_money_btm"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/px_16"
+                android:layout_marginLeft="@dimen/px_20"
+                android:layout_marginTop="@dimen/px_16"
+                android:text="@string/tixian_money"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_16_px" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/px_16"
+                    android:layout_marginLeft="@dimen/px_20"
+                    android:src="@mipmap/icon_rm" />
+
+
+                <EditText
+                    android:id="@+id/money"
+                    android:digits="0123456789."
+                    android:maxLines="1"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:paddingLeft="@dimen/px_20" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="@dimen/px_16"
+                android:layout_marginRight="@dimen/px_16"
+                android:background="#ECECEC" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/px_14"
+                    android:layout_marginLeft="@dimen/px_20"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:text="@string/tixian_ok"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_size_12_px" />
+
+                <TextView
+                    android:id="@+id/sum_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/px_14"
+                    android:layout_marginLeft="@dimen/px_16"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:text="1000"
+                    android:maxLines="1"
+                    android:textColor="#F57E5C"
+                    android:textSize="@dimen/text_size_12_px" />
+
+                <TextView
+                    android:id="@+id/sum_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/px_14"
+                    android:layout_marginLeft="@dimen/px_20"
+                    android:layout_marginTop="@dimen/px_14"
+                    android:text="@string/tixian_all"
+                    android:textColor="#339A5C"
+                    android:textSize="@dimen/text_size_12_px" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_16"
+        android:layout_marginRight="@dimen/px_16"
+        android:layout_marginTop="@dimen/px_36"
+        android:background="@drawable/cards_submint_full"
+        android:text="下一步"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_20_px" />
+
+
+</LinearLayout>

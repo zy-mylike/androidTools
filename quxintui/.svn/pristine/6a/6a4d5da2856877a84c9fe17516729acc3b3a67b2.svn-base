@@ -1,0 +1,14 @@
+﻿v项目：全新推（esalse）
+源码库：
+iPhone：svn://115.28.133.8/esales/iphone
+Android：svn://115.28.133.8/esales/android
+CMS：svn://115.28.133.8/esales/cms
+API：svn://115.28.133.8/esales/api
+HTML：svn://115.28.133.8/esales/html
+
+android打包key 密码：esales
+证书指纹 (SHA1): 1A:D6:48:C5:F4:C1:CE:E8:ED:56:BB:1A:69:4C:1C:33:B7:B4:9E:1E
+
+
+包名：com.hivedrp.esale
+应用签名 ：d1bf8fafdf842e808cc1bc0c67e52b99

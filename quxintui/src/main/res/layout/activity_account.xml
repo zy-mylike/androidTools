@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_black"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.enetic.push.activity.agent.OurAccountActivity">
+
+    <include layout="@layout/layout_activity_header_main" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F57E5C"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_24"
+            android:singleLine="true"
+            android:text="@string/tixian_ok"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_16_px" />
+
+        <TextView
+            android:id="@+id/money_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px_24"
+            android:layout_marginTop="@dimen/px_12"
+            android:singleLine="true"
+            android:text="1000元"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_32_px" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/px_8"
+        android:padding="@dimen/px_12">
+
+
+        <LinearLayout
+            android:id="@+id/layout_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/count_money" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_4"
+                android:text="@string/count_money"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_12_px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tixian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_tixian" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_4"
+                android:text="@string/tixian"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_12_px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recorder_tixian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_recorder_tixian" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_4"
+                android:text="@string/recorder_tixian"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_12_px" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

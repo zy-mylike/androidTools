@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_15"
+        android:text="填写商品详情信息" />
+
+    <EditText
+        android:id="@+id/goods_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_15"
+        android:layout_marginRight="@dimen/px_15"
+        android:layout_marginTop="@dimen/px_10"
+        android:hint="商品名称" />
+
+    <EditText
+        android:id="@+id/goods_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_15"
+        android:layout_marginRight="@dimen/px_15"
+        android:layout_marginTop="@dimen/px_10"
+        android:hint="商品价格" />
+
+    <EditText
+        android:id="@+id/goods_norms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_15"
+        android:layout_marginRight="@dimen/px_15"
+        android:layout_marginTop="@dimen/px_10"
+        android:hint="商品规格" />
+
+    <EditText
+        android:id="@+id/goods_desp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_15"
+        android:layout_marginRight="@dimen/px_15"
+        android:layout_marginTop="@dimen/px_10"
+        android:enabled="true"
+        android:gravity="top"
+        android:hint="商品规格"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:minLines="8"
+        android:scrollbars="vertical" />
+
+
+</LinearLayout>

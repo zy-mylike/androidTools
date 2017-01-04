@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingLeft="@dimen/px_16"
+    android:paddingRight="@dimen/px_16">
+
+    <ImageView
+        android:id="@+id/header_img"
+        android:layout_width="@dimen/px_96"
+        android:layout_height="@dimen/px_100"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/px_12"
+        android:layout_marginRight="@dimen/px_12"
+        android:layout_marginTop="@dimen/px_12" />
+
+    <ImageView
+        android:id="@+id/item_chose_yes_no"
+        android:layout_width="@dimen/px_96"
+        android:layout_height="@dimen/px_100"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/px_12"
+        android:layout_marginRight="@dimen/px_12"
+        android:layout_marginTop="@dimen/px_12"
+        android:background="@mipmap/item_share_record_no"
+        android:clickable="true"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/header_img"
+        android:layout_marginTop="@dimen/px_10"
+        android:layout_toRightOf="@id/header_img"
+        android:singleLine="true"
+        android:text="用户名"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_16_px" />
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginTop="@dimen/px_22"
+        android:layout_toRightOf="@+id/header_img"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享收益"
+                android:textColor="#808080"
+                android:textSize="@dimen/text_size_12_px" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_4"
+                android:text="100"
+                android:textColor="#FF524F"
+                android:textSize="@dimen/text_size_12_px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_15"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享次数"
+                android:textColor="#808080"
+                android:textSize="@dimen/text_size_12_px" />
+
+            <TextView
+                android:id="@+id/share_nums"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_4"
+                android:text="100"
+                android:textColor="#FF524F"
+                android:textSize="@dimen/text_size_12_px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_15"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成交收益"
+                android:textColor="#808080"
+                android:textSize="@dimen/text_size_12_px" />
+
+            <TextView
+                android:id="@+id/sucess_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_4"
+                android:text="90"
+                android:textColor="#FF524F"
+                android:textSize="@dimen/text_size_12_px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_15"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成功次数"
+                android:textColor="#808080"
+                android:textSize="@dimen/text_size_12_px" />
+
+            <TextView
+                android:id="@+id/sucess_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_4"
+                android:text="90"
+                android:textColor="#FF524F"
+                android:textSize="@dimen/text_size_12_px" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout"
+        android:layout_toRightOf="@+id/header_img"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_32"
+            android:layout_marginRight="@dimen/px_12"
+            android:background="@drawable/shape_share"
+            android:text="分享"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_32"
+            android:layout_marginLeft="@dimen/px_12"
+            android:background="@drawable/shape_delete"
+            android:text="刪除"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

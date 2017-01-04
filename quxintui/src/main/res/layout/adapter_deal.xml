@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/deal_img"
+        android:layout_width="@dimen/px_96"
+        android:layout_height="@dimen/px_96"
+        android:layout_margin="@dimen/px_12"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/deal_img"
+        android:layout_toRightOf="@id/deal_img"
+        android:paddingRight="@dimen/px_16">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="缩褶踝裤"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_16_px" />
+
+        <LinearLayout
+            android:layout_below="@id/name"
+            android:id="@+id/profile"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="@dimen/text_size_12_px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="浏览量"/>
+            <TextView
+                android:id="@+id/read_num"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_12_px"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="@dimen/text_size_12_px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="代理人"/>
+            <TextView
+                android:id="@+id/agent_num"
+                android:textSize="@dimen/text_size_12_px"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/profile"
+            android:layout_marginRight="@dimen/px_20"
+            android:layout_marginTop="@dimen/px_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/product_jiangli"
+                    android:drawablePadding="@dimen/px_2"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="月销量"
+                    android:textColor="#808080"
+                    android:textSize="@dimen/text_size_12_px" />
+
+                <TextView
+                    android:id="@+id/task_nums"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_2"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:layout_marginLeft="@dimen/px_21"
+                    android:text="5000"
+                    android:textColor="#FF524F"
+                    android:textSize="@dimen/text_size_12_px" />
+
+            </LinearLayout>
+
+            <View
+
+                android:layout_width="1dp"
+                android:layout_height="@dimen/px_16"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/px_5"
+                android:layout_marginRight="@dimen/px_5"
+                android:background="#CECECE" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/product_jiangli"
+                    android:drawablePadding="@dimen/px_2"
+                    android:maxLines="1"
+                    android:text="累积售"
+                    android:textColor="#808080"
+                    android:textSize="@dimen/text_size_12_px" />
+
+                <TextView
+                    android:id="@+id/task_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_2"
+                    android:layout_marginLeft="@dimen/px_21"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="50000件"
+                    android:textColor="#FF524F"
+                    android:textSize="@dimen/text_size_12_px" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -47,4 +47,21 @@ public class Reflection {
         }
         return null;
     }
+
+    public static <T> Object generateObject(Class<T> clazz, Class[] parms, Object[] objects) {
+        Constructor e = null;
+        try {
+            e = clazz.getConstructor(parms);
+            return e.newInstance(objects);
+        } catch (NoSuchMethodException e1) {
+            e1.printStackTrace();
+        } catch (IllegalAccessException e1) {
+            e1.printStackTrace();
+        } catch (InstantiationException e1) {
+            e1.printStackTrace();
+        } catch (InvocationTargetException e1) {
+            e1.printStackTrace();
+        }
+        return null;
+    }
 }

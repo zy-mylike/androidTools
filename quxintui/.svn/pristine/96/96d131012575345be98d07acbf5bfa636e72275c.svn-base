@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.enetic.push.activity.PageDetailActivity">
+
+    <include layout="@layout/layout_activity_header_main" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8F8F8"
+        android:gravity="center_vertical"
+        android:padding="@dimen/px_30">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值1" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/px_20">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/px_20"
+            android:text="套餐一"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_42_px" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_toRightOf="@+id/textView3"
+            android:text="30元含30个代理渠道"
+            android:textColor="@color/text_color_holder"
+            android:textSize="@dimen/text_size_34_px" />
+
+
+        <include
+            android:id="@+id/line"
+            layout="@layout/layout_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_3"
+            android:layout_below="@+id/textView3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_toEndOf="@+id/textView3"
+            android:layout_toRightOf="@+id/textView3"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/px_15"
+                android:paddingTop="@dimen/px_15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="包月服务费"
+                    android:textColor="@color/text_color_holder"
+                    android:textSize="@dimen/text_size_34_px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_20"
+                    android:text="注：含30个代理渠道"
+                    android:textColor="@color/text_color_holder"
+                    android:textSize="@dimen/text_size_22_px" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="30元/月"
+                    android:textColor="@color/text_color_holder"
+                    android:textSize="@dimen/text_size_34_px" />
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/px_15"
+                android:paddingTop="@dimen/px_15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="推送条数频次"
+                    android:textColor="@color/text_color_holder"
+                    android:textSize="@dimen/text_size_34_px" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="5条/日"
+                    android:textColor="@color/text_color_holder"
+                    android:textSize="@dimen/text_size_34_px" />
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/px_15"
+                android:paddingTop="@dimen/px_15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="推广费"
+                    android:textColor="@color/text_color_holder"
+                    android:textSize="@dimen/text_size_34_px" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="0.05元/条"
+                    android:textColor="@color/text_color_holder"
+                    android:textSize="@dimen/text_size_34_px" />
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/px_15"
+                android:paddingTop="@dimen/px_15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="单月天数"
+                    android:textColor="@color/text_color_holder"
+                    android:textSize="@dimen/text_size_34_px" />
+
+                <EditText
+                    android:id="@+id/month_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="30天/月"
+                    android:textColor="@color/text_color_holder"
+                    android:textSize="@dimen/text_size_34_px" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_30"
+        android:orientation="horizontal"
+        android:padding="@dimen/px_30"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总计" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="30元/月"
+            android:textColor="@color/red_holder" />
+        
+    </LinearLayout>
+
+</LinearLayout>

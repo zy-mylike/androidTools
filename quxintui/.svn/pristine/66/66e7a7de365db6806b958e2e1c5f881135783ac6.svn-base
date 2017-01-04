@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFD430"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.enetic.push.activity.LoginActivity">
+
+
+    <ImageView
+        android:layout_width="@dimen/px_100"
+        android:layout_height="@dimen/px_100"
+        android:layout_marginTop="@dimen/px_60"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/login_logo" />
+
+
+
+    <TextView
+        android:id="@+id/bt_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Log_botton_tips"
+        android:textColor="@color/text_color"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/px_20"
+        android:textSize="@dimen/text_size_16_px"/>
+
+    <ImageView
+        android:id="@+id/login_wx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bt_tip"
+        android:src="@mipmap/login_wx"
+        android:layout_marginBottom="@dimen/px_12"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_59"
+        android:orientation="vertical"
+        android:layout_above="@id/login_wx">
+
+        <LinearLayout
+            android:id="@+id/login_shop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_50"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="@dimen/px_7"
+            android:paddingBottom="@dimen/px_7"
+            android:layout_marginLeft="@dimen/px_37"
+            android:layout_marginRight="@dimen/px_37"
+            android:background="@drawable/login_selector"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/login_shop"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_18_px"
+                android:textColor="@color/text_color"
+                android:layout_marginLeft="@dimen/px_8"
+                android:text="@string/login_shop"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/login_agent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_50"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/px_7"
+            android:paddingBottom="@dimen/px_7"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/px_37"
+            android:layout_marginRight="@dimen/px_37"
+            android:layout_marginTop="@dimen/px_12"
+            android:background="@drawable/login_selector"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/login_agent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_18_px"
+                android:textColor="@color/text_color"
+                android:layout_marginLeft="@dimen/px_8"
+                android:text="@string/login_agent"/>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/no_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18_px"
+            android:textColor="@color/text_color"
+            android:layout_marginLeft="@dimen/px_8"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/px_16"
+            android:text="@string/login_no"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

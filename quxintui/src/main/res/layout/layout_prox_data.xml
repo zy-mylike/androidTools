@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:RoundProgressBar="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="@dimen/px_40">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/px_30">
+
+            <lecho.lib.hellocharts.view.PieChartView
+                android:id="@+id/progressBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/cancel_action"
+                android:layout_weight="1"
+                RoundProgressBar:max="100"
+                RoundProgressBar:roundColor="#CDEDF7"
+                RoundProgressBar:roundProgress="24"
+                RoundProgressBar:roundProgressColor="#23BFFF"
+                RoundProgressBar:roundWidth="@dimen/px_25"
+                RoundProgressBar:textColor="@color/colorAccent"
+                RoundProgressBar:textSize="28sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="统计类型1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/px_30">
+
+            <lecho.lib.hellocharts.view.PieChartView
+                android:id="@+id/progressBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/cancel_action"
+                android:layout_weight="1"
+                RoundProgressBar:max="100"
+                RoundProgressBar:roundColor="#CDEDF7"
+                RoundProgressBar:roundProgress="40"
+                RoundProgressBar:roundProgressColor="#23BFFF"
+                RoundProgressBar:roundWidth="@dimen/px_25"
+                RoundProgressBar:textColor="@color/colorAccent"
+                RoundProgressBar:textSize="28sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="统计类型2" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="@dimen/px_40">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/px_30">
+
+            <lecho.lib.hellocharts.view.PieChartView
+                android:id="@+id/progressBar3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/cancel_action"
+                android:layout_weight="1"
+                RoundProgressBar:max="100"
+                RoundProgressBar:roundColor="#CDEDF7"
+                RoundProgressBar:roundProgress="80"
+                RoundProgressBar:roundProgressColor="#23BFFF"
+                RoundProgressBar:roundWidth="@dimen/px_25"
+                RoundProgressBar:textColor="@color/colorAccent"
+                RoundProgressBar:textSize="28sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="统计类型3" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/px_30">
+
+            <lecho.lib.hellocharts.view.PieChartView
+                android:id="@+id/progressBar4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/cancel_action"
+                android:layout_weight="1"
+                RoundProgressBar:max="100"
+                RoundProgressBar:roundColor="#CDEDF7"
+                RoundProgressBar:roundProgress="58"
+                RoundProgressBar:roundProgressColor="#23BFFF"
+                RoundProgressBar:roundWidth="@dimen/px_25"
+                RoundProgressBar:textColor="@color/colorAccent"
+                RoundProgressBar:textSize="28sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="统计类型4" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

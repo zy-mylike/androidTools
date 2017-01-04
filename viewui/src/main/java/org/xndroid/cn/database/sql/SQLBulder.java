@@ -57,9 +57,9 @@ public class SQLBulder {
                     try {
                         String value = String.valueOf(field.get(bean));
                         if (ColumnDbType.TEXT == ColumnTypeUtils.getFileType(field)) {
-                            builder.append((TextUtils.isEmpty(value) || "null".equals(value) ? "\' \'" : " \'" + value + " \'") + " ,");
+                            builder.append((TextUtils.isEmpty(value) || "null".equals(value) ? "\'\'" : " \'" + value + "\'") + " ,");
                         } else {
-                            builder.append((TextUtils.isEmpty(value) || "null".equals(value) ? "\' \'" : value) + " ,");
+                            builder.append((TextUtils.isEmpty(value) || "null".equals(value) ? "\'\'" : value) + ",");
                         }
 
                     } catch (IllegalAccessException e) {

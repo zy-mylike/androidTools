@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class BaseApplication extends Application {
     private ArrayList<Activity> mActivities;
-    private static  BaseApplication application;
+    private static BaseApplication application;
 
     public static BaseApplication getApplication() {
         return application;
@@ -33,8 +33,8 @@ public class BaseApplication extends Application {
     }
 
     public void finishAllActivity() {
-        for (Activity ac : mActivities) {
-            ac.finish();
+        for (Activity activity : mActivities) {
+            activity.finish();
         }
         mActivities.clear();
     }

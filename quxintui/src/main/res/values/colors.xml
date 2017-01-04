@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFF</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#bbbbbb</color>
+
+
+    <color name="home_toolbar">#929292</color>
+
+    <color name="back">#000</color>
+    <color name="red_holder">#F57E5C</color>
+    <color name="gray_holder">#A7A7A7</color>
+    <color name="text_color">#3D3D3D</color>
+    <color name="text_6666_color">#6D6D6D</color>
+    <color name="text_color_selector">#FFD430</color>
+    <color name="text_color_holder">#929292</color>
+
+    <color name="layout_black">#F0F0F0</color>
+    <color name="trance">#80ffffff</color>
+    <color name="transparents">@android:color/transparent</color>
+    <color name="background_color">#f5f0ea</color>
+    <!--全透明-->
+    <color name="transparent_background">#00000000</color>
+</resources>

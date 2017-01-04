@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/header_img"
+        android:layout_width="@dimen/px_46"
+        android:layout_height="@dimen/px_52"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/px_12"
+        android:layout_marginLeft="@dimen/px_16"
+        android:layout_marginTop="@dimen/px_12"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/header_img"
+        android:layout_marginLeft="@dimen/px_16"
+        android:layout_toRightOf="@id/header_img"
+        android:singleLine="true"
+        android:text="用户名"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_16_px" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@id/name"
+        android:layout_marginBottom="@dimen/px_12"
+        android:layout_marginTop="@dimen/px_8"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="代理人数"
+                android:textColor="#808080"
+                android:textSize="@dimen/text_size_12_px" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_4"
+                android:text="100个"
+                android:textColor="#FF524F"
+                android:textSize="@dimen/text_size_12_px" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_15"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商品数量"
+                android:textColor="@color/text_color_holder"
+                android:textSize="@dimen/text_size_12_px" />
+
+            <TextView
+                android:id="@+id/visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_4"
+                android:text="900个"
+                android:textColor="#FF524F"
+                android:textSize="@dimen/text_size_12_px" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+
+        <ImageView
+            android:id="@+id/icon_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_add" />
+
+        <ImageView
+            android:id="@+id/icon_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="@dimen/px_32"
+            android:layout_marginRight="@dimen/px_16"
+            android:src="@mipmap/icon_delete" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ViewLineLayout="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_black"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.enetic.push.activity.agent.AgentsetActivity">
+
+    <include layout="@layout/layout_activity_header_main" />
+
+    <com.enetic.push.view.ViewLineLayout
+        android:id="@+id/layout_tiao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_8"
+        ViewLineLayout:left_drawable="@mipmap/icon_set_yinsi"
+        ViewLineLayout:right_drawable="@mipmap/user_more"
+        ViewLineLayout:texts="隐私条款"
+        android:visibility="gone"/>
+
+    <include layout="@layout/layout_line" />
+
+    <com.enetic.push.view.ViewLineLayout
+        android:id="@+id/layout_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ViewLineLayout:left_drawable="@mipmap/icon_set_about"
+        ViewLineLayout:right_drawable="@mipmap/user_more"
+        ViewLineLayout:texts="关于我们"/>
+    <include layout="@layout/layout_line" />
+
+
+
+    <com.enetic.push.view.ViewLineLayout
+        android:id="@+id/layout_cache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ViewLineLayout:left_drawable="@mipmap/icon_set_cache"
+        ViewLineLayout:right_drawable="@mipmap/user_more"
+        ViewLineLayout:texts="清理缓存"/>
+    <include layout="@layout/layout_line" />
+
+    <com.enetic.push.view.ViewLineLayout
+        android:id="@+id/layout_mark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ViewLineLayout:left_drawable="@mipmap/icon_set_yinsi"
+        ViewLineLayout:right_drawable="@mipmap/user_more"
+        ViewLineLayout:texts="给我们评分"/>
+    <include layout="@layout/layout_line" />
+
+    <com.enetic.push.view.ViewLineLayout
+        android:id="@+id/layout_feekback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ViewLineLayout:left_drawable="@mipmap/icon_set_feekback"
+        ViewLineLayout:right_drawable="@mipmap/user_more"
+        ViewLineLayout:texts="意见反馈"/>
+
+    <include layout="@layout/layout_line" />
+
+
+    <com.enetic.push.view.ViewLineLayout
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ViewLineLayout:left_drawable="@mipmap/icon_set_logout"
+        ViewLineLayout:right_drawable="@mipmap/user_more"
+        ViewLineLayout:texts="退出登录"/>
+</LinearLayout>

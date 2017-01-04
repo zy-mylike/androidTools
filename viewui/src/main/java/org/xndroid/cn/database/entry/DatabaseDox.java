@@ -16,7 +16,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * Created by Administrator on 2016/11/21 0021.
@@ -32,6 +34,7 @@ public class DatabaseDox extends BaseDataEnery {
     protected Config mConfig;
 
     private DatabaseDox(Config config) {
+        super();
         if (config == null) {
             new Throwable(new RuntimeException("dataBase config is null"));
         }
@@ -42,7 +45,7 @@ public class DatabaseDox extends BaseDataEnery {
     }
 
 
-    public static DatabaseDox getIntences(Config config) {
+    public synchronized static DatabaseDox getIntences(Config config) {
         if (config == null) {
             config = new Config();
         }
@@ -204,13 +207,21 @@ public class DatabaseDox extends BaseDataEnery {
         endTransaction();
     }
 
+    ReadWriteLock lock = new ReentrantReadWriteLock();
+
     @Override
     public void execSQL(String s) {
+        lock.writeLock().lock();
+        debug(s);
+        sqLiteDatabase.execSQL(s); 
+        lock.writeLock().unlock();
+    }
 
-        synchronized (mConfig) {
-            sqLiteDatabase.execSQL(s);
-            debug(s);
-        }
+    @Override
+    public Cursor execQuerySQL(String s) {
+        debug(s);
+        return sqLiteDatabase.rawQuery(s, null);
+
     }
 
     private void debug(String s) {
@@ -223,18 +234,10 @@ public class DatabaseDox extends BaseDataEnery {
         CONFIG_MAP.remove(mConfig);
     }
 
-    @Override
-    public Cursor execQuerySQL(String s) {
-        debug(s);
-        return sqLiteDatabase.rawQuery(s, null);
-    }
 
     private void beginTransaction() {
         if (allowTransaction) {
             sqLiteDatabase.beginTransaction();
-        } else {
-            mLock.lock();
-            writeLocked = true;
         }
 
     }
@@ -249,11 +252,7 @@ public class DatabaseDox extends BaseDataEnery {
         if (allowTransaction) {
             sqLiteDatabase.endTransaction();
         }
-        if (this.writeLocked) {
-            this.mLock.unlock();
-            this.writeLocked = false;
-        }
-    }
 
+    }
 
 }

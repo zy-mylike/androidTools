@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="@mipmap/nav_back"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <TextView
+            android:id="@+id/toolleft_title"
+            style="?toolbarNavigationButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center|left"
+            android:padding="@dimen/px_10"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_20_px" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:padding="@dimen/px_10"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_20_px" />
+
+        <ImageView
+            android:id="@+id/tooltitle_right"
+            style="?toolbarNavigationButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="right"
+            android:background="@null"
+            android:padding="@dimen/px_10"
+            android:src="@android:drawable/ic_input_add"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/comment"
+            style="?toolbarNavigationButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:padding="9dp"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.AppBarLayout>

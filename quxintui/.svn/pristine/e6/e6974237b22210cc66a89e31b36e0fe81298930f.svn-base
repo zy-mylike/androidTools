@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/adapter_contact_tag" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/header_img"
+            android:layout_width="@dimen/px_46"
+            android:layout_height="@dimen/px_52"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/px_12"
+            android:layout_marginLeft="@dimen/px_16"
+            android:layout_marginTop="@dimen/px_12"
+            android:src="@mipmap/ic_launcher" />
+        <ImageView
+            android:layout_width="@dimen/px_46"
+            android:layout_height="@dimen/px_52"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/px_12"
+            android:layout_marginLeft="@dimen/px_16"
+            android:layout_marginTop="@dimen/px_12"
+            android:src="@mipmap/icon_header_cirle" />
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/header_img"
+            android:layout_marginLeft="@dimen/px_16"
+            android:layout_toRightOf="@id/header_img"
+            android:singleLine="true"
+            android:text="用户名"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_16_px" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/name"
+            android:layout_marginTop="@dimen/px_8"
+            android:layout_marginBottom="@dimen/px_12"
+            android:layout_below="@id/name"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="代理人数"
+                    android:textColor="#808080"
+                    android:textSize="@dimen/text_size_12_px" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100个"
+                    android:layout_marginTop="@dimen/px_4"
+                    android:textColor="#FF524F"
+                    android:textSize="@dimen/text_size_12_px" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_15"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品数量"
+                    android:textColor="@color/text_color_holder"
+                    android:textSize="@dimen/text_size_12_px" />
+
+                <TextView
+                    android:id="@+id/product_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="900个"
+                    android:layout_marginTop="@dimen/px_4"
+                    android:textColor="#FF524F"
+                    android:textSize="@dimen/text_size_12_px" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/icon_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_32"
+            android:layout_marginRight="@dimen/px_36"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_delete"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+</LinearLayout>

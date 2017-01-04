@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="@dimen/px_96"
+        android:layout_height="@dimen/px_100"
+        android:layout_margin="@dimen/px_12"
+        android:background="@color/text_color_holder"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/img"
+        android:layout_alignTop="@id/img"
+        android:layout_toRightOf="@id/img"
+        android:paddingRight="@dimen/px_16">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="缩褶踝裤"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_16_px" />
+
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginTop="@dimen/px_8"
+            android:maxLines="1"
+            android:text="简介:**************"
+            android:ellipsize="end"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_16_px" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/profile"
+            android:layout_marginRight="@dimen/px_20"
+            android:layout_marginTop="@dimen/px_10"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/product_jiangli"
+                    android:drawablePadding="@dimen/px_2"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="价格"
+                    android:textColor="#808080"
+                    android:textSize="@dimen/text_size_12_px" />
+
+                <TextView
+
+                    android:id="@+id/task_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_2"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="5000"
+                    android:textColor="#FF524F"
+                    android:textSize="@dimen/text_size_12_px" />
+
+            </LinearLayout>
+
+            <View
+
+                android:layout_width="1dp"
+                android:layout_height="@dimen/px_16"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/px_5"
+                android:layout_marginRight="@dimen/px_5"
+                android:background="#CECECE" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/product_nums"
+                    android:drawablePadding="@dimen/px_2"
+                    android:maxLines="1"
+                    android:text="库存"
+                    android:textColor="#808080"
+                    android:textSize="@dimen/text_size_12_px" />
+
+                <TextView
+                    android:id="@+id/task_nums"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_2"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="50000件"
+                    android:textColor="#FF524F"
+                    android:textSize="@dimen/text_size_12_px" />
+
+
+            </LinearLayout>
+
+            <View
+
+                android:layout_width="1dp"
+                android:layout_height="@dimen/px_16"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/px_5"
+                android:layout_marginRight="@dimen/px_5"
+                android:background="#CECECE" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/product_sells"
+                    android:drawablePadding="@dimen/px_2"
+                    android:maxLines="1"
+                    android:text="销售"
+                    android:textColor="#808080"
+                    android:textSize="@dimen/text_size_12_px" />
+
+                <TextView
+                    android:id="@+id/product_sum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_2"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="10000件"
+                    android:textColor="#FF524F"
+                    android:textSize="@dimen/text_size_12_px" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

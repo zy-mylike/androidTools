@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:paddingBottom="@dimen/px_12"
+        android:paddingTop="@dimen/px_24"
+        android:text=" "
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size_20_px" />
+
+    <include layout="@layout/layout_line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_12"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/px_18"
+        android:paddingRight="@dimen/px_18">
+
+        <TextView
+            android:id="@+id/share_wx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/px_8"
+            android:drawableTop="@mipmap/share_friends"
+            android:gravity="center"
+            android:paddingBottom="@dimen/px_12"
+            android:paddingTop="@dimen/px_24"
+            android:text="分享至朋友圈"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_12_px" />
+
+        <TextView
+            android:id="@+id/wx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/px_8"
+            android:drawableTop="@mipmap/icon_share_agent"
+            android:gravity="center"
+            android:paddingBottom="@dimen/px_12"
+            android:paddingTop="@dimen/px_24"
+            android:text="邀请微信好友"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_12_px" />
+
+        <TextView
+            android:id="@+id/take_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawablePadding="@dimen/px_8"
+            android:drawableTop="@mipmap/icon_send"
+            android:gravity="center"
+            android:paddingBottom="@dimen/px_12"
+            android:paddingTop="@dimen/px_24"
+            android:text="发送至代理"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_12_px" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="@dimen/px_25"
+        android:text="取消"
+        android:textColor="@color/text_color" />
+
+
+</LinearLayout>

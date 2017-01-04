@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_black"
+    android:fitsSystemWindows="true"
+    tools:context="com.enetic.push.activity.businesses.PublishSucessActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_activity_header_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="@dimen/px_8"
+        android:background="@drawable/edittext_bg"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/px_12"
+            android:layout_marginTop="@dimen/px_24"
+            android:drawablePadding="@dimen/px_12"
+            android:drawableRight="@mipmap/icon_send_ok"
+            android:gravity="center"
+            android:text="已成功添加商品"
+            android:textColor="#FF3D3D3D"
+            android:textSize="@dimen/text_size_20_px" />
+
+        <include layout="@layout/layout_line" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_24"
+            android:layout_marginRight="@dimen/px_24"
+            android:layout_marginTop="@dimen/px_16"
+            android:text="商品已成功上架，你现在可以选择一键分享至朋友圈或生成推广链接发给您的渠道代理。"
+            android:textColor="#FF3D3D3D"
+            android:textSize="@dimen/text_size_16_px" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/px_8"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/px_10">
+
+
+            <Button
+                android:id="@+id/send_proxy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/px_15"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="@dimen/px_8"
+                android:drawableTop="@mipmap/icon_sends"
+                android:gravity="center"
+                android:text="发送代理"
+                android:textColor="#FF3D3D3D"
+                android:textSize="@dimen/text_size_16_px" />
+
+            <Button
+                android:id="@+id/share_wx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="@dimen/px_8"
+                android:drawableTop="@mipmap/icon_share_wxf"
+                android:gravity="center"
+                android:text="朋友圈"
+                android:textColor="#FF3D3D3D"
+                android:textSize="@dimen/text_size_16_px" />
+
+            <Button
+                android:id="@+id/wx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="@dimen/px_8"
+                android:drawableTop="@mipmap/icon_share_wxl"
+                android:gravity="center"
+                android:text="微信好友"
+                android:textColor="#FF3D3D3D"
+                android:textSize="@dimen/text_size_16_px" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/px_12"
+        android:background="@android:color/white"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/add_proxy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawablePadding="@dimen/px_12"
+            android:drawableRight="@mipmap/icon_adds"
+            android:text="继续添加"
+            android:textColor="#FF3D3D3D"
+            android:textSize="@dimen/text_size_16_px" />
+    </LinearLayout>
+
+</RelativeLayout>

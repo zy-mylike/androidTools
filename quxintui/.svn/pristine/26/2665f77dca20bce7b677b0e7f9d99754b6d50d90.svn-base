@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="上传图片 (规格：尺寸：300*300，大小：小于800K)"
+        android:layout_marginLeft="@dimen/px_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.enetic.push.view.NoScrollGridView
+        android:id="@+id/noScrollgridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_17"
+        android:layout_marginTop="@dimen/px_17"
+        android:horizontalSpacing="@dimen/px_7"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/px_7"/>
+
+</LinearLayout>

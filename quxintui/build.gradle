@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'esales'
+            keyPassword 'esales'
+            storeFile file('E:/code_project/android/androidUtils/quxintui/sign/androidkey.jks')
+            storePassword 'esales'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+    defaultConfig {
+        applicationId "com.hivedrp.esale"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            signingConfig signingConfigs.config
+        }
+    }
+    productFlavors {
+        esales {
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs' //this way we can find the .aar file in libs folder
+    }
+}
+
+android {
+    useLibrary 'org.apache.http.legacy'
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile(name: 'eteclab-ui', ext: 'aar')
+    compile(name: 'hellocharts-library', ext: 'aar')
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.jiechic.library:xUtils:2.6.14'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile files('libs/libammsdk.jar')
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+}
